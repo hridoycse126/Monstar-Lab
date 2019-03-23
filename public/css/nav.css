@@ -1,0 +1,78 @@
+      body {
+            font-family: 'Lato', sans-serif;
+            transition: background-color .5s;
+        }
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+          }
+
+.overlay-content {
+            position: relative;
+            top: 15%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+.overlay a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+  display: block;
+    transition: 0.3s;
+        }
+.overlay a:hover
+.overlay a:focus {
+    color: #f1f1f1;
+            }
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+        }
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .overlay {padding-top: 15px;}
+  .overlay a {font-size: 18px;}
+}
+.overlay ul li ul{display:none;}
+.search_area {
+	overflow: hidden;
+	margin-top: 53px;
+	margin-bottom: 39px;
+}
+	
+.search_area form input[type="text"] {
+	border: 1px solid #fff;
+	background-color: #fff;
+	padding: 6px 18px;
+	float: left;
+	width: 250px;
+	margin-right: 33px;
+}
+.search_area select {
+	display: block;
+	width: 230px;
+	float: left;
+	padding: 5px 18px;
+	height: 45px;
+	margin-right: 33px;
+}
+
