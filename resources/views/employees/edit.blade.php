@@ -7,56 +7,61 @@
 <div class="modal-content">
   <div class="row">
   <div class="col-sm-6">
-                        <h2>Edit <b>City</b> List</h2>
+                        <h2>Edit <b>Employee</b> Details</h2>
                     </div>
 
- <form action="" method="POST" enctype="multipart/form-data">
-                   <input type="hidden" name="id" value="{{ $cities->id }}">
+ <form action="/employee/update/insert" method="POST" enctype="multipart/form-data">
+                   <input type="hidden" name="id" value="{{ $employees->id }}">
                     
                     <div class="modal-body">                    
                         <div class="form-group">
                             <label><h5>First Name</h5></label>
-                            <input type="text" class="form-control" name="first_name" value="" required>
+                            <input type="text" class="form-control" name="first_name" value="{{  $employees->first_name }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Last Name</h5></label>
-                            <input type="text" class="form-control" name="last_name" value="" required>
+                            <input type="text" class="form-control" name="last_name" value="{{ $employees->last_name }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Father's Name</h5></label>
-                            <input type="text" class="form-control" name="father_name" value="" required>
+                            <input type="text" class="form-control" name="father_name" value="{{ $employees->father_name }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Email Address</h5></label>
-                            <input type="email" class="form-control" name="email" value="" required>
+                            <input type="email" class="form-control" name="email" value="{{ $employees->email }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Mobile Number</h5></label>
-                            <input type="number" class="form-control" name="number" value="" required>
+                            <input type="number" class="form-control" name="number" value="{{ $employees->number }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Address</h5></label>
-                            <input type="text" class="form-control" name="address" value="" required>
+                            <input type="text" class="form-control" name="address" value="{{ $employees->address }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Blood Group</h5></label>
-                            <input type="text" class="form-control" name="blood" value="" required>
+                            <input type="text" class="form-control" name="blood" value="{{ $employees->blood }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label><h5>NID No</h5></label>
+                            <input type="text" class="form-control" name="nid" value="{{ $employees->nid }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Gender</h5></label>
-                            <input type="text" class="form-control" name="gender" value="" required>
+                            <input type="text" class="form-control" name="gender" value="{{ $employees->gender }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Date Joined</h5></label>
-                            <input type="text" class="form-control" name="join_date" value="" required>
+                            <input type="text" class="form-control" name="join_date" value="{{ $employees->join_date }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Date Of Birth</h5></label>
-                            <input type="text" class="form-control" name="birth_date" value="" required>
+                            <input type="text" class="form-control" name="birth_date" value="{{ $employees->birth_date }}" required>
                         </div>                  
                     </div>
                     <div class="modal-footer">
                         <a href="/list"><input type="button" class="btn btn-default" onclick="/list" data-dismiss="modal" value="Cancel"></a>
+                        @csrf()
                         <input type="submit" class="btn btn-info" value="Update">
                     </div>
 </form>

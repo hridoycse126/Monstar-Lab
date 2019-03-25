@@ -20,7 +20,7 @@ class EmployeeController extends Controller
     public function index()
     {
         //
-        //$employees=Employee::orderBy('id','DESC')->get();
+        $employees=Employee::orderBy('id','DESC')->get();
         $salaries=Salary::orderBy('id','DESC')->get();
         $departments=Department::orderBy('id','DESC')->get();
         $divisions=Division::orderBy('id','DESC')->get();
@@ -107,19 +107,19 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Request $request)
     {
         //
-        $employees =Employee::get();
-        $employees = DB::table('employees')
+        $id=$request->get('id');
+        $employees=Employee::find($id);
+        /*$employees = DB::table('employees')
             ->join('salaries', 'salaries.id', '=', 'employees.salary_id')
             ->join('departments', 'departments.id', '=', 'employees.department_id')
             ->join('divisions', 'divisions.id', '=', 'employees.division_id')
             ->join('cities', 'cities.id', '=', 'employees.city_id')
             ->join('countries', 'countries.id', '=', 'employees.country_id')
-            ->get();
-
-        return view('employees.index', ['employees' => $employees]);
+            ->get();*/
+        return view('employees.views', ['employees' => $employees]);
     }
 
     /**
@@ -128,9 +128,12 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
         //
+        $id=$request->get('id');
+        $employees=Employee::find($id);
+        return view('employees.edit', ['employees'=>$employees]);
     }
 
     /**
@@ -140,9 +143,22 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+        $id=$request->get('id');
+        $employees=Employee::find($id);
+        $employees->first_name=$request->input('first_name');
+        $employees->last_name=$request->input('last_name');
+        $employees->father_name=$request->input('father_name');
+        $employees->email=$request->input('email');
+        $employees->number=$request->input('number');
+        $employees->address=$request->input('address');
+        $employees->blood=$request->input('blood');
+        $employees->nid=$request->input('nid');
+        $employees->gender=$request->input('gender');
+        $employees->save();
+        return redirect('/employee/list')->with('employee', 'Employees Details Updated Successfully.');
     }
 
     /**
@@ -151,8 +167,12 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         //
+        $id=$request->get('id');
+        $employees=Employee::find($id);
+        $employees->delete();
+        return redirect('/employee/list')->with('employee','Employee Details Deleted Successfully');
     }
 }

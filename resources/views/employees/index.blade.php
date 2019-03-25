@@ -51,9 +51,9 @@
                         <td>{{$emp->nid}}</td>
                         <td>{{$emp->gender}}</td>
                         <td>
-                            <a href="" class="view" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View">&#xE896;</i></a>
-                            <a href="" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                           <a href=""  onclick="return confirm('Are you sure you want to delete these Records?')" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="{{ asset('employee/show?id='.$emp->id)}}" class="view"><i class="material-icons" data-toggle="tooltip" title="View">&#xE896;</i></a>
+                            <a href="{{ asset('employee/update?id='.$emp->id)}}" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                           <a href="{{ asset('/employee/delete?id='.$emp->id)}}"  onclick="return confirm('Are you sure you want to delete these Records?')" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                     @endforeach
@@ -61,4 +61,13 @@
             </table>
         </div>
     </div>
+      @if (session('employee'))
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+        {{ session('employee') }}
+        </div>
+    </div>
+</div>
+    @endif
     @endsection

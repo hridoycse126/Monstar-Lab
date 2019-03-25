@@ -7,10 +7,12 @@
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+
                             <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -36,24 +38,22 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                            <p>Department</p>
+                            <p>Gender</p>
                             <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>Division</p>
+                            <p>Department</p>
                             <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
+                            <p>City</p>
+                            <a href="">Web Designer</a><br/>
+                            <p>Country</p>
+                            <a href="">Web Designer</a><br/>
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="background:  #E6E6FA;">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <h2>First Name</h2>
+                                                <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>Kshiti123</p>
@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Name</label>
+                                                <label>Father's Name</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>Kshiti Ghelani</p>
@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Phone</label>
+                                                <label>Mobile Number</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>123 456 7890</p>
@@ -85,25 +85,25 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Profession</label>
+                                                <label>Blood Group</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>Web Developer and Designer</p>
                                             </div>
                                         </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="background:  #E6E6FA;">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Joining Date</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Date Of Birth</p>
+                                                <p>12-2-2000</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Salary</label>
+                                                <label>Date Of Birth</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>10$/hr</p>
@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Total Projects</label>
+                                                <label>Salary</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>230</p>
@@ -119,7 +119,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>English Level</label>
+                                                <label>NID No</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>Expert</p>
@@ -127,18 +127,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Availability</label>
+                                                <label>Address</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>6 months</p>
                                             </div>
                                         </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
