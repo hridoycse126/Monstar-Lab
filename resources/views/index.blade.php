@@ -3,7 +3,7 @@
 	<div class="limiter">
 		<div class="container-login100">	
 			<div class="wrap-login100">
-					<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+					<form class="login100-form validate-form" method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
                         @csrf
 					<h5 class="login100-form-title p-b-26" style="color: green">Login(EMS)</h5>
 					<span class="login100-form-title p-b-26">

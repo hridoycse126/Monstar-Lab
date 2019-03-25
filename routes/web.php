@@ -14,12 +14,16 @@
 Route::get('/', function () {
     return view('index');
 });
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/view', function () {
+    return view('employees.views');
+});
+
 Route::get('/forget', function () {
     return view('admin.forgetpage');
 });
-
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 /*City Routes*/
 Route::get('/city','CityController@index')->name('cities');
 Route::get('/city/show','CityController@show');

@@ -2,7 +2,7 @@
 @section('other')
     <div class="container">
         <div class="search_area">
-        <form action="" method="">
+        <form action="" method="" enctype="multipart/form-data">
             <input type="text" placeholder="search" />
             <select>
                 <option>First Name</option>

@@ -9,7 +9,7 @@
                         <h2>Edit <b>Deparment</b> List</h2>
                     </div>
 
- <form action="/department/update/insert" method="POST">
+ <form action="/department/update/insert" method="POST" enctype="multipart/form-data">
                    <input type="hidden" name="id" value="{{ $departments->id }}">
                     
                     <div class="modal-body">                    

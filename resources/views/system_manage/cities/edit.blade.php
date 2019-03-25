@@ -9,7 +9,7 @@
                         <h2>Edit <b>City</b> List</h2>
                     </div>
 
- <form action="/city/update/insert" method="POST">
+ <form action="/city/update/insert" method="POST" enctype="multipart/form-data">
                    <input type="hidden" name="id" value="{{ $cities->id }}">
                     
                     <div class="modal-body">                    

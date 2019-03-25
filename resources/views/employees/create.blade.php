@@ -9,8 +9,8 @@
 <div class="limiter">
     <div class="container-login100">  
       <div class="wrap-login100"  style="width:750px">
-        <form action="/employee/insert" method="POST" class="login100-form validate-form">
-          
+        <form action="/employee/insert" method="POST" class="login100-form validate-form" enctype="multipart/form-data">
+          {{ csrf_field() }}
           <h5 class="login100-form-title p-b-26" style="color: green">Add Employee</h5>
           
           <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
@@ -130,17 +130,13 @@
           <div class="file-field input-field col s12 m12 l12 xl8 offset-xl2">
             <p style="font-size: 25px"><b>Picture<b></p>
             <div class="btn">
-              <input type="file" name="picture">
+              <input type="file" id="picture" name="picture">
             </div>
-               <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" value="picture">
-          </div>
 
           <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
               <button class="login100-form-btn">
-                @csrf()
                 <input type="submit" value="">Save
               </button>
             </div>

@@ -50,6 +50,10 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+
         $employees=new Employee();
         $employees->first_name = $request->input('first_name');
         $employees->last_name = $request->input('last_name');
@@ -83,8 +87,15 @@ class EmployeeController extends Controller
 
         $employees->join_date = $request->input('join_date');
         $employees->birth_date = $request->input('birth_date');
-        //$mysqldate = \DateTime::createFromFormat('d/m/Y', $date)->format('Y-m-d');
-        //$employees->date = $mysqldate;
+        
+        $picture = null;
+        if ($request->hasFile('picture')) {
+            $imageName = $request->file('picture');
+            $extension = $imageName->getClientOriginalExtension();
+            $picture = date('Y-m-d') . '-' . str_random(10) . '.' . $extension;
+            $imageName->move(public_path('pictures/'), $picture);
+        }
+        $employees->picture = $picture;
 
         $employees->Save();
         return redirect('/employee')->with('employee','Employee Details Added Successfully');
