@@ -2,26 +2,24 @@
 @section('other')
 
 <div class="container emp-profile">
-            <form method="post">
+    <a href="/employee/list"><input type="button" class="btn btn-default" value="Back" style="margin-bottom: 15px;background:  #fcfcfc;font-size: 15px;"></a>
+            <form>
+              
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
-
-                        </div>
+                      <div class="profile-img"> 
+                            @if($employees->picture!==null)
+                            <img src="{{asset('pictures/'.$employees->picture)}}" alt="{{$employees->picture}}" />
+                            @endif
+                        </div>  
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                        {{$employees->first_name}}
                                     </h5>
                                     <h6>
-                                        Web Developer and Designer
+                                        division->dev_nam
                                     </h6>
                                     
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -35,11 +33,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 55px;">
                     <div class="col-md-4">
                         <div class="profile-work">
                             <p>Gender</p>
-                            <a href="">Website Link</a><br/>
+                            <a href="">{{$employees->gender}}</a><br/>
                             <p>Department</p>
                             <a href="">Web Designer</a><br/>
                             <p>City</p>
@@ -56,7 +54,7 @@
                                                 <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti123</p>
+                                                <p>{{$employees->last_name}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -64,7 +62,7 @@
                                                 <label>Father's Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
+                                                <p>{{$employees->father_name}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -72,7 +70,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p>{{$employees->email}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -80,7 +78,7 @@
                                                 <label>Mobile Number</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>123 456 7890</p>
+                                                <p>{{$employees->number}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -88,7 +86,7 @@
                                                 <label>Blood Group</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{$employees->blood}}</p>
                                             </div>
                                         </div>
                             </div>
@@ -98,7 +96,7 @@
                                                 <label>Joining Date</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>12-2-2000</p>
+                                                <p>{{$employees->join_date}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -106,23 +104,25 @@
                                                 <label>Date Of Birth</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>10$/hr</p>
+                                                <p>{{$employees->birth_date}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Salary</label>
                                             </div>
+                                            salarie
                                             <div class="col-md-6">
-                                                <p>230</p>
+                                                <p>sal</p>
                                             </div>
+                                            
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>NID No</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Expert</p>
+                                                <p>{{$employees->nid}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -130,13 +130,14 @@
                                                 <label>Address</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>6 months</p>
+                                                <p>{{$employees->address}}</p>
                                             </div>
                                         </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>           
+             
+           </form>        
         </div>
         @endsection

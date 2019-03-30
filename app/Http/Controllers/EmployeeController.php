@@ -26,7 +26,7 @@ class EmployeeController extends Controller
         $divisions=Division::orderBy('id','DESC')->get();
         $cities=City::orderBy('id','DESC')->get();
         $countries=Country::orderBy('id','DESC')->get();
-        return view('employees.create',['salaries'=>$salaries,'departments'=>$departments,'divisions'=>$divisions,'cities'=>$cities,'countries'=>$countries]);
+        return view('employees.create',['employees'=>$employees,'salaries'=>$salaries,'departments'=>$departments,'divisions'=>$divisions,'cities'=>$cities,'countries'=>$countries]);
     }
 
     /**
@@ -53,6 +53,15 @@ class EmployeeController extends Controller
         $this->validate($request, [
             'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+
+        $picture = null;
+        if ($request->hasFile('picture')) {
+            $imageName = $request->file('picture');
+            $extension = $imageName->getClientOriginalExtension();
+            $picture = date('Y-m-d') . '-' . str_random(10) . '.' . $extension;
+            $imageName->move(public_path('pictures/'), $picture);
+
+        }
 
         $employees=new Employee();
         $employees->first_name = $request->input('first_name');
@@ -88,15 +97,7 @@ class EmployeeController extends Controller
         $employees->join_date = $request->input('join_date');
         $employees->birth_date = $request->input('birth_date');
         
-        $picture = null;
-        if ($request->hasFile('picture')) {
-            $imageName = $request->file('picture');
-            $extension = $imageName->getClientOriginalExtension();
-            $picture = date('Y-m-d') . '-' . str_random(10) . '.' . $extension;
-            $imageName->move(public_path('pictures/'), $picture);
-        }
         $employees->picture = $picture;
-
         $employees->Save();
         return redirect('/employee')->with('employee','Employee Details Added Successfully');
     }
@@ -112,14 +113,15 @@ class EmployeeController extends Controller
         //
         $id=$request->get('id');
         $employees=Employee::find($id);
-        /*$employees = DB::table('employees')
+        $employeesPost=DB::table('employees')->join('salaries', 'salaries.id', '=', 'employees.salary_id')->get();
+            /*$employees = DB::table('employees')
             ->join('salaries', 'salaries.id', '=', 'employees.salary_id')
             ->join('departments', 'departments.id', '=', 'employees.department_id')
             ->join('divisions', 'divisions.id', '=', 'employees.division_id')
             ->join('cities', 'cities.id', '=', 'employees.city_id')
             ->join('countries', 'countries.id', '=', 'employees.country_id')
             ->get();*/
-        return view('employees.views', ['employees' => $employees]);
+        return view('employees.views', ['employees'=>$employees,'employeesPost'=>$employeesPost]);
     }
 
     /**
@@ -148,6 +150,17 @@ class EmployeeController extends Controller
         //
         $id=$request->get('id');
         $employees=Employee::find($id);
+
+        $this->validate($request, [
+            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+        $picture = $request->get('imageOld');
+        if ($request->hasFile('picture')) {
+            $imageName = $request->file('picture');
+            $extension = $imageName->getClientOriginalExtension();
+            $picture = date('Y-m-d') . '-' . str_random(10) . '.' . $extension;
+            $imageName->move(public_path('pictures/'), $picture);
+        }
         $employees->first_name=$request->input('first_name');
         $employees->last_name=$request->input('last_name');
         $employees->father_name=$request->input('father_name');
@@ -157,6 +170,7 @@ class EmployeeController extends Controller
         $employees->blood=$request->input('blood');
         $employees->nid=$request->input('nid');
         $employees->gender=$request->input('gender');
+        $employees->picture = $picture;
         $employees->save();
         return redirect('/employee/list')->with('employee', 'Employees Details Updated Successfully.');
     }

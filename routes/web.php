@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/view', function () {
-    return view('employees.views');
-});
-
 Route::get('/forget', function () {
     return view('admin.forgetpage');
 });
@@ -68,7 +64,7 @@ Route::POST('/division/update/insert','DivisionController@update');
 Route::get('/division/delete','DivisionController@destroy');
 
 /*Employee Routes*/
-Route::get('/employee','EmployeeController@index')->name('employees');
+Route::get('/employee','EmployeeController@index');
 Route::get('/employee/show','EmployeeController@show');
 Route::get('/employee/list','EmployeeController@create');
 Route::POST('/employee/insert','EmployeeController@store');

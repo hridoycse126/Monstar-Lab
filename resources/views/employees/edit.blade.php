@@ -11,6 +11,7 @@
                     </div>
 
  <form action="/employee/update/insert" method="POST" enctype="multipart/form-data">
+    {{ csrf_field() }}
                    <input type="hidden" name="id" value="{{ $employees->id }}">
                     
                     <div class="modal-body">                    
@@ -59,9 +60,14 @@
                             <input type="text" class="form-control" name="birth_date" value="{{ $employees->birth_date }}" required>
                         </div>                  
                     </div>
+                    <div class="file-field input-field col s12 m12 l12 xl8 offset-xl2">
+            <p style="font-size: 25px"><b>Picture<b></p>
+            <div class="btn">
+              <input type="file" id="picture" name="picture" value="{{asset('pictures/'.$employees->picture)">
+            </div>
                     <div class="modal-footer">
-                        <a href="/list"><input type="button" class="btn btn-default" onclick="/list" data-dismiss="modal" value="Cancel"></a>
-                        @csrf()
+                        <a href="/employee/list"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
+                        
                         <input type="submit" class="btn btn-info" value="Update">
                     </div>
 </form>

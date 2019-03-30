@@ -2,7 +2,7 @@
 @section('other')
     <div class="container">
         <div class="search_area">
-        <form action="" method="" enctype="multipart/form-data">
+        <form enctype="multipart/form-data">
             <input type="text" placeholder="search" />
             <select>
                 <option>First Name</option>
@@ -34,6 +34,7 @@
                         <th>Blood Group</th>
                         <th>NID Number</th>
                         <th>Gender</th>
+                        <th>Picture</th>
                         <th>Option</th>
                                        
                     </tr>
@@ -50,8 +51,9 @@
                         <td>{{$emp->blood}}</td>
                         <td>{{$emp->nid}}</td>
                         <td>{{$emp->gender}}</td>
+                        <td>{{$emp->picture}}</td>
                         <td>
-                            <a href="{{ asset('employee/show?id='.$emp->id)}}" class="view"><i class="material-icons" data-toggle="tooltip" title="View">&#xE896;</i></a>
+                            <a href="{{ asset('/employee/show?id='.$emp->id)}}" class="view"><i class="material-icons" data-toggle="tooltip" title="View">&#xE896;</i></a>
                             <a href="{{ asset('employee/update?id='.$emp->id)}}" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                            <a href="{{ asset('/employee/delete?id='.$emp->id)}}"  onclick="return confirm('Are you sure you want to delete these Records?')" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
