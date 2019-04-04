@@ -1,5 +1,5 @@
       function openNav() {
-            document.getElementById("myNav").style.width = "25%";
+            document.getElementById("myNav").style.width = "300px";
             document.getElementById("main").style.marginLeft = "0";
             document.body.style.backgroundImage = "linear-gradient(to right, #0f2027, #203a43, #2c5364)";
         }

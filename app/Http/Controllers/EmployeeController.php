@@ -111,18 +111,20 @@ class EmployeeController extends Controller
     public function show(Request $request)
     {
         //
+        
         $id=$request->get('id');
         $employees=Employee::find($id);
-        $employeesPost=DB::table('employees')->join('salaries', 'salaries.id', '=', 'employees.salary_id')->get();
-            /*$employees = DB::table('employees')
-            ->join('salaries', 'salaries.id', '=', 'employees.salary_id')
-            ->join('departments', 'departments.id', '=', 'employees.department_id')
-            ->join('divisions', 'divisions.id', '=', 'employees.division_id')
-            ->join('cities', 'cities.id', '=', 'employees.city_id')
-            ->join('countries', 'countries.id', '=', 'employees.country_id')
-            ->get();*/
-        return view('employees.views', ['employees'=>$employees,'employeesPost'=>$employeesPost]);
+        $employeesPost = DB::table('employees')
+        ->join('salaries', 'salaries.id', '=', 'employees.salary_id')
+        ->join('departments', 'departments.id', '=', 'employees.dep_id')
+        ->join('divisions', 'divisions.id', '=', 'employees.div_id')
+        ->join('cities', 'cities.id', '=', 'employees.city_id')
+        ->join('countries', 'countries.id', '=', 'employees.country_id')
+        ->where('employees.id', '=', $employees->id)
+        ->first(['employees.*', 'salaries.salary_amount', 'departments.dep_name', 'divisions.div_name','cities.city_name','countries.country_name']);
+        return view('employees.views', ['employeesPost'=>$employeesPost]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -188,5 +190,15 @@ class EmployeeController extends Controller
         $employees=Employee::find($id);
         $employees->delete();
         return redirect('/employee/list')->with('employee','Employee Details Deleted Successfully');
+    }
+    public function search(Request $request){
+        $this->validate($request,[
+            'search'   => 'required|min:1',
+            'options'  => 'required'
+        ]);
+        $str = $request->input('search');
+        $option = $request->input('options');
+        $employees = Employee::where($option, 'LIKE' , '%'.$str.'%')->Paginate(4);
+        return view('employees.index')->with(['employees' => $employees , 'search' => true ]);
     }
 }

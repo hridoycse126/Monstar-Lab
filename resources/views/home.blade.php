@@ -1,141 +1,27 @@
 @extends('layouts.admin')
 @section('admin')
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+<div id="header">
+  <h1>Monstar-Lab</h1>
+  <h2>By <a href="http://www.monstarlab.net/"> Monstar Lab </a></h2>
+</div>
+<div id="content">
 
-<div class="limiter">
-    <div class="container-login100">  
-      <div class="wrap-login100"  style="width:750px">
-        <form class="login100-form validate-form">
-          <h5 class="login100-form-title p-b-26" style="color: green">Add Employee</h5>
-          
-          <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
-            <input class="input100" type="text" name="first_name">
-            <span class="focus-input100" data-placeholder="First Name"></span>
-          </div>
+  <div id="colTwo">
+    <h3>Welcome to Monstar-Lab Group</h3>
+    <p><strong>MONSTAR-LAB </strong>We handle the planning, development, and growth of IT products and more. Feel free to contact us.</p>
+    <p><img src="images/img1.jpg" alt="" width="130" height="110" class="img1" />The backgrounds, systems, and processes of our clients for making IT products are all different. Please feel free to contact us and share your goals, problems, and plans for using IT as well as the apps and products you wish to make.
 
-          <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
-            <input class="input100" type="text" name="last_name">
-            <span class="focus-input100" data-placeholder="Last Name"></span>
-          </div>
+In addition to providing consistent support throughout the process, you can also consult with us about specific parts of the process. We will examine the specific system and process, and make proposals about areas in which we can help.
 
-          <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
-            <input class="input100" type="text" name="father_name">
-            <span class="focus-input100" data-placeholder="Father's Name"></span>
-          </div>
+First, fill out the form to the right. Our representative will contact you within three business days.</p>
+    
+    <h3>Your strategic partner in the field of IT</h3>
+<p>Technology has dramatically changed our world, putting consumers and users at the forefront, speeding up business development, and providing vast amounts of data for decision-making. It is and continues to be an era in which it is critical for businesses to embrace and use technology to build new ideas and to accelerate growth. Monstar Lab vision is to be a vital strategic IT partner to businesses around the world, helping them to leverage information technology to create leading products using a network of professional resources around the globe.
 
-          <div class="wrap-input100 validate-input" data-validate = "Valid email is: az@mail.com">
-            <input class="input100" type="email" name="email">
-            <span class="focus-input100" data-placeholder="Email Address"></span>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "0-9">
-            <input class="input100" type="number" name="number">
-            <span class="focus-input100" data-placeholder="Mobile Number"></span>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Valid address is: a-z/0-9">
-            <input class="input100" type="email" name="address">
-            <span class="focus-input100" data-placeholder="Address"></span>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Valid blood group is: A-/AB+">
-            <p>Blood Group</p> 
-            <select class="input100" name="blood">
-            <option value="Female">None</option> 
-              <option value="Male">A-</option> 
-              <option value="Female">A+</option> 
-              <option value="Male">B-</option> 
-              <option value="Female">B+</option>
-              <option value="Male">O-</option> 
-              <option value="Female">O+</option>
-              <option value="Male">AB-</option> 
-              <option value="Female">AB+</option>
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "0-9">
-            <input class="input100" type="number" name="nid">
-            <span class="focus-input100" data-placeholder="NID Number"></span>
-          </div>
-
-
-          <div class="wrap-input100 validate-input" data-validate = "Valid gender is: male/female">
-            <p>Gender</p> 
-            <select class="input100" name="gender"> 
-              <option value="Male">Male</option> 
-              <option value="Female">Female</option> 
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Tk">
-            <p>Salary</p> 
-            <select class="input100" name=""> 
-              <option value="Salary">Salary</option> 
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "name of department">
-            <p>Department</p> 
-            <select class="input100" name=""> 
-              <option value="dep">Department</option> 
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Division name choice">
-            <p>Division</p> 
-            <select class="input100" name=""> 
-              <option value="dv">Division</option> 
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "City name choice">
-            <p>City</p> 
-            <select class="input100" name=""> 
-              <option value="dv">City</option> 
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "COUNTRY name choice">
-            <p>Country</p> 
-            <select class="input100" name=""> 
-              <option value="dv">Country</option> 
-            </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Valid date is: 11/12/2018">
-            <p>Date Joined</p>
-            <input class="input100" type="date" name="join_date"> 
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Valid date is: 11/12/2018">
-            <p>Date Of Birth</p>
-            <input class="input100" type="date" name="birth_date">
-          </div>
-
-
-          <div class="file-field input-field col s12 m12 l12 xl8 offset-xl2">
-            <p style="font-size: 25px"><b>Picture<b></p>
-            <div class="btn">
-              <input type="file" name="picture">
-            </div>
-               <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" value="picture">
-          </div>
-
-          <div class="container-login100-form-btn">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button class="login100-form-btn">
-                <a href="#">Save</a>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+We do this by leveraging our own development bases spanning multiple countries, as well as by tapping onto a large world-wide partner network. We implement solutions through an integrated chain, from upstream processes such as strategy and planning, on to development and services marketing, and finally to growth. In particular, we have built up a management system and a product development track record that has met the high quality standards of leading clients in Japan. We welcome you to engage us, as a strategic partner, to discover IT technology and how it can enable your business.</p>
   </div>
+  <div style="clear: both;">&nbsp;</div>
+</div>
+
 @endsection

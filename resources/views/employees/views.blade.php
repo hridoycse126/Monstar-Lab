@@ -8,18 +8,18 @@
                 <div class="row">
                     <div class="col-md-4">
                       <div class="profile-img"> 
-                            @if($employees->picture!==null)
-                            <img src="{{asset('pictures/'.$employees->picture)}}" alt="{{$employees->picture}}" />
+                            @if($employeesPost->picture!==null)
+                            <img src="{{asset('pictures/'.$employeesPost->picture)}}" alt="{{$employeesPost->picture}}" />
                             @endif
                         </div>  
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        {{$employees->first_name}}
+                                        {{$employeesPost->first_name}}
                                     </h5>
                                     <h6>
-                                        division->dev_nam
+                                       {{$employeesPost->div_name}}
                                     </h6>
                                     
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -37,13 +37,14 @@
                     <div class="col-md-4">
                         <div class="profile-work">
                             <p>Gender</p>
-                            <a href="">{{$employees->gender}}</a><br/>
+                            <a>{{$employeesPost->gender}}</a><br/>
                             <p>Department</p>
-                            <a href="">Web Designer</a><br/>
+                            <a>{{$employeesPost->dep_name}}</a><br/>
                             <p>City</p>
-                            <a href="">Web Designer</a><br/>
+                            <a>{{$employeesPost->city_name}}</a><br/>
                             <p>Country</p>
-                            <a href="">Web Designer</a><br/>
+                            <a>{{$employeesPost->country_name}}</a><br/>
+                            
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -54,7 +55,7 @@
                                                 <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->last_name}}</p>
+                                                <p>{{$employeesPost->last_name}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -62,7 +63,7 @@
                                                 <label>Father's Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->father_name}}</p>
+                                                <p>{{$employeesPost->father_name}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -70,7 +71,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->email}}</p>
+                                                <p>{{$employeesPost->email}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -78,7 +79,7 @@
                                                 <label>Mobile Number</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->number}}</p>
+                                                <p>{{$employeesPost->number}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -86,7 +87,7 @@
                                                 <label>Blood Group</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->blood}}</p>
+                                                <p>{{$employeesPost->blood}}</p>
                                             </div>
                                         </div>
                             </div>
@@ -96,7 +97,7 @@
                                                 <label>Joining Date</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->join_date}}</p>
+                                                <p>{{$employeesPost->join_date}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -104,16 +105,15 @@
                                                 <label>Date Of Birth</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->birth_date}}</p>
+                                                <p>{{$employeesPost->birth_date}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Salary</label>
                                             </div>
-                                            salarie
                                             <div class="col-md-6">
-                                                <p>sal</p>
+                                                <p>{{$employeesPost->salary_amount}}</p>
                                             </div>
                                             
                                         </div>
@@ -122,7 +122,7 @@
                                                 <label>NID No</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->nid}}</p>
+                                                <p>{{$employeesPost->nid}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -130,7 +130,7 @@
                                                 <label>Address</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{$employees->address}}</p>
+                                                <p>{{$employeesPost->address}}</p>
                                             </div>
                                         </div>
                             </div>

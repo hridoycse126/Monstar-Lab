@@ -2,16 +2,20 @@
 @section('other')
     <div class="container">
         <div class="search_area">
-        <form enctype="multipart/form-data">
-            <input type="text" placeholder="search" />
-            <select>
-                <option>First Name</option>
-                <option>Blood Group</option>
-                <option>Mobile Number</option>
+        <form action="{{route('employees.search')}}" method="POST" enctype="multipart/form-data">
+            @csrf()
+            <input type="text" name="search" placeholder="search" />
+            <select name="options" id="options">
+                <option value="first_name">First Name</option>
+                <option value="blood">Blood Group</option>
+                <option value="number">Mobile Number</option>
+                <option value="email">E-mail</option>
+                <option value="nid">NID</option>
             </select>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">

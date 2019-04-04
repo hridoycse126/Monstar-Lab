@@ -1,7 +1,10 @@
 <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <div class="overlay-content">
-      <ul>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <ul class="side-menu">
+      <li>
+        <a href="/home">Home</a>
+      </li>
 
       <li>
         <a href="/employee">Add Employee List</a>
@@ -23,17 +26,11 @@
       </ul>
       </li>
       </ul>
-
       <li>
-        <a href="/admin/list">Admin Management</a>
-      </li>
-
-      <li>
-        <a href="#">About</a>
+        <a href="/about">About Us</a>
       </li>
         
     </ul>
- 
  </div>
    </div>
 <div id="main">
