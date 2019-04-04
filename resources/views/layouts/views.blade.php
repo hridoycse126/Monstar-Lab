@@ -75,7 +75,7 @@
 </head>
 <body class="topgrad">
 	@include('include.navbar') 
-	<div id="app" style="background: #E6E6FA;">
+<div id="app" style="background: white;">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel"  >
             <div class="container" style="background: white;">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -124,7 +124,7 @@
             </div>
         </nav>
 	<main>
-        @yield('other')
+        @yield('views')
     </main>
 </div>
 <!--===============================================================================================-->

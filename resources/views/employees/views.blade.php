@@ -1,8 +1,8 @@
-@extends('layouts.other')
-@section('other')
+@extends('layouts.views')
+@section('views')
 
 <div class="container emp-profile">
-    <a href="/employee/list"><input type="button" class="btn btn-default" value="Back" style="margin-bottom: 15px;background:  #fcfcfc;font-size: 15px;"></a>
+    <a href="/employee/list"><input type="button" class="btn btn-default" value="Back" style="margin-bottom: 55px;background:  #566787; font-size: 20px; color: #fff;"></a>
             <form>
               
                 <div class="row">
@@ -47,7 +47,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8" style="margin-top: -55px">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="background:  #E6E6FA;">
                                         <div class="row">

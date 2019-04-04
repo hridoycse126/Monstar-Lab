@@ -68,11 +68,11 @@ Route::POST('/division/update/insert','DivisionController@update');
 Route::get('/division/delete','DivisionController@destroy');
 
 /*Employee Routes*/
-Route::POST('/employee/search','EmployeeController@search')->name('employees.search');
-Route::get('/employee','EmployeeController@index')->name('employees');;
+Route::get('/employee','EmployeeController@index')->name('employees');
 Route::get('/employee/show','EmployeeController@show');
 Route::get('/employee/list','EmployeeController@create');
 Route::POST('/employee/insert','EmployeeController@store');
 Route::get('/employee/update','EmployeeController@edit');
 Route::POST('/employee/update/insert','EmployeeController@update');
 Route::get('/employee/delete','EmployeeController@destroy');
+Route::POST('/employee/search','EmployeeController@search')->name('employees.search');

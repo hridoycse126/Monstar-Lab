@@ -31,7 +31,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background:#138D75;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -58,7 +58,7 @@ body {
         }
 .overlay a:hover
 .overlay a:focus {
-    color: #f1f1f1;
+    color: #4B0082;
             }
 
 .overlay .closebtn {
@@ -66,7 +66,7 @@ body {
     top: 2vh;
     right: 2vw;
     font-size: 6vh;
-    color: #FFFFFF;
+    color: #4B0082;
     text-decoration: none;
 }
 .side-menu a {
@@ -76,8 +76,8 @@ body {
     font-size: 25px;
     line-height: 10vh;
     padding: 4px 6px;
-    color: #FFFFFF;
-    border-top: 5px #636b6d groove;
+    color: #4B0082;
+    border-top: 5px #4B0082 groove;
 }
 
 .side-menu a:hover, .nav-bar a:hover {
@@ -87,7 +87,7 @@ body {
 }
 
 .side-menu a:visited, .nav-bar a:visited {
-    color: #FFFFFF;
+    color: #4B0082;
 }
 
 .openbtn {

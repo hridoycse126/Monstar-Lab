@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{asset('images/icons/favicon.png')}}"/>
+	<link rel="icon" type="image/png" href="{{asset('images/icons/favicon1.png')}}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('PageDesign/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->

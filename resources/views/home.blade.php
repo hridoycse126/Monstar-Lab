@@ -3,7 +3,7 @@
 
 <div id="header">
   <h1>Monstar-Lab</h1>
-  <h2>By <a href="http://www.monstarlab.net/"> Monstar Lab </a></h2>
+  <h2>By <a href="http://www.monstarlab.com/"> Monstar Lab </a></h2>
 </div>
 <div id="content">
 

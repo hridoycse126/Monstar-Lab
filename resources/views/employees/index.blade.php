@@ -4,15 +4,15 @@
         <div class="search_area">
         <form action="{{route('employees.search')}}" method="POST" enctype="multipart/form-data">
             @csrf()
-            <input type="text" name="search" placeholder="search" />
-            <select name="options" id="options">
-                <option value="first_name">First Name</option>
-                <option value="blood">Blood Group</option>
-                <option value="number">Mobile Number</option>
-                <option value="email">E-mail</option>
-                <option value="nid">NID</option>
+            <input type="text" name="search" placeholder="search" style="font-size: 15px;" />
+            <select name="options" id="options" style="font-size: 15px;">
+                <option value="first_name" style="font-size: 15px;">First Name</option>
+                <option value="blood" style="font-size: 15px;">Blood Group</option>
+                <option value="number" style="font-size: 15px;">Mobile Number</option>
+                <option value="email" style="font-size: 15px;">E-mail</option>
+                <option value="nid" style="font-size: 15px;">NID</option>
             </select>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" style="font-size: 15px;">Submit</button>
         </form>
     </div>
 
