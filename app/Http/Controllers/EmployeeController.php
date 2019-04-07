@@ -13,6 +13,15 @@ use App\Country;
 class EmployeeController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -51,7 +60,11 @@ class EmployeeController extends Controller
     {
         //
         $this->validate($request, [
-            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'address'        =>  'required|min:10|max:500',
+            'number'          =>  'required|max:13',
+            'nid'          =>  'required|max:16',
+            'email'          =>  'required|email|unique:employees,email|max:250'
         ]);
 
         $picture = null;
@@ -154,7 +167,11 @@ class EmployeeController extends Controller
         $employees=Employee::find($id);
 
         $this->validate($request, [
-            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'address'        =>  'required|min:10|max:350',
+            'number'          =>  'required|max:11',
+            'nid'          =>  'required|max:10',
+            'email'          =>  'required|email|unique:employees,email|max:250'
         ]);
         $picture = $request->get('imageOld');
         if ($request->hasFile('picture')) {
