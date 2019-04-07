@@ -191,6 +191,7 @@ class EmployeeController extends Controller
         $employees->gender=$request->input('gender');
         $employees->picture = $picture;
         $employees->save();
+        
         return redirect('/employee/list')->with('employee', 'Employees Details Updated Successfully.');
     }
 

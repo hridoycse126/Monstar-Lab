@@ -6,7 +6,7 @@
 <div class="modal-content">
   <div class="row">
   <div class="col-sm-6">
-                        <h2>Edit <b>City</b> List</h2>
+                        <h2 style="margin-left: 25px;margin-top: 5px;">Edit <b>City</b> List</h2>
                     </div>
 
  <form action="/city/update/insert" method="POST" enctype="multipart/form-data">

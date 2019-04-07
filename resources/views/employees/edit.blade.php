@@ -7,7 +7,7 @@
 <div class="modal-content">
   <div class="row">
   <div class="col-sm-6">
-                        <h2>Edit <b>Employee</b> Details</h2>
+                        <h2 style="margin-left: 25px;margin-top: 5px;">Edit <b>Employee</b> Details</h2>
                     </div>
 
  <form action="/employee/update/insert" method="POST" enctype="multipart/form-data">
@@ -63,8 +63,9 @@
                     <div class="file-field input-field col s12 m12 l12 xl8 offset-xl2">
             <p style="font-size: 25px"><b>Picture<b></p>
             <div class="btn">
-              <input type="file" id="picture" name="picture" value="{{asset('pictures/'.$employees->picture)">
+              <input type="file" id="picture" name="picture" value="{{old('picture') ? : $employees->picture }}">
             </div>
+             
                     <div class="modal-footer">
                         <a href="/employee/list"><input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"></a>
                         

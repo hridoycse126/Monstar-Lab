@@ -1,5 +1,14 @@
 @extends('layouts.other')
 @section('other')
+ @if (session('employee'))
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+        {{ session('employee') }}
+        </div>
+    </div>
+</div>
+@endif
     <div class="container">
         <div class="search_area">
         <form action="{{route('employees.search')}}" method="POST" enctype="multipart/form-data">
@@ -67,13 +76,5 @@
             </table>
         </div>
     </div>
-      @if (session('employee'))
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-        {{ session('employee') }}
-        </div>
-    </div>
-</div>
-    @endif
+     
     @endsection

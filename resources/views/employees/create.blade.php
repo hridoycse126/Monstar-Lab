@@ -1,6 +1,14 @@
 @extends('layouts.admin')
 @section('admin')
-
+@if (session('employee'))
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+        {{ session('employee') }}
+        </div>
+    </div>
+</div>
+    @endif
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -146,14 +154,6 @@
     </div>
   </div>
 
-  @if (session('employee'))
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-        {{ session('employee') }}
-        </div>
-    </div>
-</div>
-    @endif
+  
 
 @endsection

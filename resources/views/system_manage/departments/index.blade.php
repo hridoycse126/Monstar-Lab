@@ -1,5 +1,14 @@
 @extends('layouts.other')
 @section('other')
+@if (session('department'))
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+        {{ session('department') }}
+        </div>
+    </div>
+</div>
+@endif
 <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -59,14 +68,6 @@
             </div>
         </div>
          </div>
-         @if (session('department'))
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-        {{ session('department') }}
-        </div>
-    </div>
-</div>
-@endif
+         
 
 @endsection
