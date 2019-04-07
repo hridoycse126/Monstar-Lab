@@ -18,12 +18,12 @@ Route::get('/', function () {
 Route::get('/forget', function () {
     return view('admin.forgetpage');
 });
-Route::get('/about', function () {
-    return view('about');
-});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/about','HomeController@about')->name('about');
+
 /*City Routes*/
 Route::get('/city','CityController@index')->name('cities');
 Route::get('/city/show','CityController@show');
@@ -76,3 +76,4 @@ Route::get('/employee/update','EmployeeController@edit');
 Route::POST('/employee/update/insert','EmployeeController@update');
 Route::get('/employee/delete','EmployeeController@destroy');
 Route::POST('/employee/search','EmployeeController@search')->name('employees.search');
+

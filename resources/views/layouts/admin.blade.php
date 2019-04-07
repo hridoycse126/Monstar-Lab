@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!--===============================================================================================-->  
-    <link rel="icon" type="image/png" href="{{asset('images/icons/favicon.png')}}"/>
+    <link rel="icon" type="image/png" href="{{asset('images/icons/favicon1.png')}}"/>
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('PageDesign/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->
@@ -36,7 +36,6 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/toggle.css')}}">
 <!--===============================================================================================-->
 
-
 <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -46,9 +45,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/toggle.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('css/default.css') }}" rel="stylesheet" type="text/css" />
-
+<link href="{{ asset('card/button.css') }}" rel="stylesheet"  type='text/css' />
 
     <title>Admin Page</title>
 </head>
@@ -133,6 +130,5 @@
     <!--===============================================================================================-->
     <script src="{{asset('js/toggle.js')}}"></script>
     <!--===============================================================================================-->
-
 </body>
 </html>
