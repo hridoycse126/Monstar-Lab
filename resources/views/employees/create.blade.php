@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('admin')
-@if (session('employee'))
-    <div class="modal-dialog">
+  @if (session('employee'))
+    <div class="modal-dialog" style="font-size: 20px;">
         <div class="modal-content">
             <div class="modal-header">
         {{ session('employee') }}
@@ -54,7 +54,7 @@
           <div class="wrap-input100 validate-input" data-validate = "Valid blood group is: A-/AB+">
             <p>Blood Group</p> 
             <select class="input100" name="blood">
-            <option value="">None</option> 
+              <option value="">None</option> 
               <option value="A-">A-</option> 
               <option value="A+">A+</option> 
               <option value="B-">B-</option> 
@@ -154,6 +154,6 @@
     </div>
   </div>
 
-  
+
 
 @endsection

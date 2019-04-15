@@ -1,7 +1,7 @@
 @extends('layouts.other')
 @section('other')
  @if (session('employee'))
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="font-size: 20px;">
         <div class="modal-content">
             <div class="modal-header">
         {{ session('employee') }}
@@ -47,7 +47,6 @@
                         <th>Blood Group</th>
                         <th>NID Number</th>
                         <th>Gender</th>
-                        <th>Picture</th>
                         <th>Option</th>
                                        
                     </tr>
@@ -64,7 +63,6 @@
                         <td>{{$emp->blood}}</td>
                         <td>{{$emp->nid}}</td>
                         <td>{{$emp->gender}}</td>
-                        <td>{{$emp->picture}}</td>
                         <td>
                             <a href="{{ asset('/employee/show?id='.$emp->id)}}" class="view"><i class="material-icons" data-toggle="tooltip" title="View">&#xE896;</i></a>
                             <a href="{{ asset('employee/update?id='.$emp->id)}}" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>

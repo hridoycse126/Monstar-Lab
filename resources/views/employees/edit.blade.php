@@ -61,9 +61,9 @@
                         </div>                  
                     </div>
                     <div class="file-field input-field col s12 m12 l12 xl8 offset-xl2">
-            <p style="font-size: 25px"><b>Picture<b></p>
+            <p style="font-size: 25px"><b><b></p>
             <div class="btn">
-              <input type="file" id="picture" name="picture" value="{{old('picture') ? : $employees->picture }}">
+              <input type="hidden" name="imageOld" value="{{ $employees->picture }}">
             </div>
              
                     <div class="modal-footer">

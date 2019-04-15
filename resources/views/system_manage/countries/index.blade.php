@@ -2,7 +2,7 @@
 @section('other')
 
 @if (session('country'))
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="font-size: 20px;">
         <div class="modal-content">
             <div class="modal-header">
         {{ session('country') }}

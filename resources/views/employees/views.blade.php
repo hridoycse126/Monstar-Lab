@@ -15,10 +15,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
-                                    <h5>
+                                    <h5 style="font-style: bold;font-size: 20px;">
                                         {{$employeesPost->first_name}}
                                     </h5>
-                                    <h6>
+                                    <h6 style="font-style: bold;font-size: 17px;">
                                        {{$employeesPost->div_name}}
                                     </h6>
                                     
