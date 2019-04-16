@@ -55,20 +55,9 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/views/bootstrap.min.js')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/views/main.css')}}">
 <!--===============================================================================================-->
-<!-- Bootstrap Core CSS -->
-<link href="{{asset('web/css/bootstrap.min.css')}}" rel='stylesheet' type='text/css' />
 
-<link rel="stylesheet" href="css/morris.css" type="text/css"/>
-<!-- Graph CSS -->
-<link href="{{asset('web/css/font-awesome.css')}}" rel="stylesheet"> 
-
-<!-- //jQuery -->
-<link href="{{asset('web/css/extra.css')}}" rel='stylesheet' type='text/css'/>
-
-<!-- lined-icons -->
-<link rel="stylesheet" href="{{asset('web/css/icon-font.min.css')}}" type='text/css' />
 <!-- //lined-icons -->
-
+<link href="{{asset('card/pdf.min.css')}}" rel='stylesheet' type='text/css' />
 
 
 	<title>Admin Page</title>
@@ -152,17 +141,6 @@
 	<!--===============================================================================================-->
 	<script src="{{asset('js/main.js')}}"></script>
 	<!--===============================================================================================-->
-	<!--js -->
-<script src="{{asset('web/js/jquery.nicescroll.js')}}"></script>
-<script src="{{asset('web/js/scripts.js')}}"></script>
-<!-- Bootstrap Core JavaScript -->
-   <script src="{{asset('web/js/bootstrap.min.js')}}"></script>
-   <!-- /Bootstrap Core JavaScript -->	   
-<!-- morris JavaScript -->	
-<script src="{{asset('web/js/raphael-min.js')}}"></script>
-<script src="{{asset('web/js/morris.js')}}"></script>
-<!-- jQuery -->
-<script src="{{asset('web/js/jquery-2.1.4.min.js')}}"></script>
 
 </body>
 </html>

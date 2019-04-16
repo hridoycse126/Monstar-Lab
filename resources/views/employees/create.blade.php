@@ -20,6 +20,11 @@
         <form action="/employee/insert" method="POST" class="login100-form validate-form" enctype="multipart/form-data">
           {{ csrf_field() }}
           <h5 class="login100-form-title p-b-26" style="color: green">Add Employee</h5>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid id is: 0-9">
+            <input class="input100" type="text" name="emp_id" required>
+            <span class="focus-input100" data-placeholder="Employee ID"></span>
+          </div>
           
           <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
             <input class="input100" type="text" name="first_name">

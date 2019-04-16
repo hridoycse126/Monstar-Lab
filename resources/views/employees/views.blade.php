@@ -36,6 +36,8 @@
                 <div class="row" style="margin-top: 55px;">
                     <div class="col-md-4">
                         <div class="profile-work">
+                            <p>ID</p>
+                            <a>{{$employeesPost->emp_id}}</a><br/>
                             <p>Gender</p>
                             <a>{{$employeesPost->gender}}</a><br/>
                             <p>Department</p>

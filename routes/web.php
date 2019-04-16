@@ -76,4 +76,4 @@ Route::get('/employee/update','EmployeeController@edit');
 Route::POST('/employee/update/insert','EmployeeController@update');
 Route::get('/employee/delete','EmployeeController@destroy');
 Route::POST('/employee/search','EmployeeController@search')->name('employees.search');
-
+Route::get('/downloadPDF','EmployeeController@downloadPDF');

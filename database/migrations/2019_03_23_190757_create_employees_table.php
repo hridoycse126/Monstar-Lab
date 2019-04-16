@@ -15,6 +15,7 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('emp_id'); 
             $table->string('first_name');
             $table->string('last_name');
             $table->string('father_name');
@@ -31,7 +32,7 @@ class CreateEmployeesTable extends Migration
             $table->integer('country_id');
             $table->date('join_date');
             $table->date('birth_date');
-            $table->string('picture')->nullable(); 
+            $table->string('picture')->nullable();
             $table->timestamps();
         });
     }
