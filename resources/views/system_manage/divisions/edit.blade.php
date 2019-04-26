@@ -15,7 +15,7 @@
                     <div class="modal-body">                    
                         <div class="form-group">
                             <label><h5>Division Name</h5></label>
-                            <input type="text" class="form-control" name="div_name" value="{{  $divisions->div_name }}" required>
+                            <input type="text" maxlength="15" class="form-control" name="div_name" value="{{  $divisions->div_name }}" required>
                         </div>                 
                     </div>
                     <div class="modal-footer">

@@ -14,7 +14,7 @@ div
     z-index: 1;
     height:55px;
     width: 100%;
-    background-color: #668284;
+    background-color: #C1E3E1;
     margin-bottom: 5px
     }
  
@@ -58,14 +58,13 @@ a:hover {
     margin-left: 14%;*/
     height: auto;
     width: 99%;
-    background-color: #E3EDD8;
+    background-color: #ffffff;
     }
      
 #footer
 {
     height:40px;
     clear:both;
-    position: relative;
     background-color: #C1E3E1;
     }
      
@@ -122,12 +121,10 @@ td
    <div class="left">
      </div>
      <div class="right">
-
             <h3>ID: {{$employees->emp_id}}</h3>
-
+            <h3>Email: {{$employees->email}}</h3>
             <h3>Gender: {{$employees->gender}}</h3>
-            <h3>Blood Group: {{$employees->blood}}</h3>
-
+            
             <h3>Personal Information:</h3>
             <p>
             <ul>
@@ -140,7 +137,7 @@ td
                 <br>
                 <br>
                 <li>
-                <span id="course-name">Email: </span>{{$employees->email}}</li>
+                <span id="course-name">Blood Group: </span>{{$employees->blood}}</li>
                 <br>
                 <br>
                 <li>
@@ -180,14 +177,16 @@ td
                 <br>
                 <br>
                 <li>
-                <span id="course-name">Joining Date: </span>{{$employees->join_date}}</li>
+                <span id="course-name">Joining Date: </span>{{$employees->join_date}} -Present</li>
                 <br>
                 <br>
             </ul>
             </p>
             @endforeach
      </div>
-     <div id="footer"></div>
+     <div id="footer">
+         <h4 style="margin-left: 320px;padding-top: 5px;">Monstar-Lab</h4>
+     </div>
     </body>
 </html>
 </html>

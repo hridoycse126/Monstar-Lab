@@ -15,7 +15,7 @@
                     <div class="modal-body">                    
                         <div class="form-group">
                             <label><h5>Country Name</h5></label>
-                            <input type="text" class="form-control" name="country_name" value="{{  $countries->country_name }}" required>
+                            <input type="text" maxlength="15" class="form-control" name="country_name" value="{{  $countries->country_name }}" required>
                         </div>                 
                     </div>
                     <div class="modal-footer">

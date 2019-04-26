@@ -13,7 +13,7 @@
         <div class="search_area">
         <form action="{{route('employees.search')}}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <input type="text" name="search" placeholder="search" required style="font-size: 15px;" />
+            <input type="text" name="search" maxlength="11" placeholder="search" required style="font-size: 15px;" />
             <select name="options" id="options" style="font-size: 15px;">
                 <option value="emp_id" style="font-size: 15px;">ID</option>
                 <option value="first_name" style="font-size: 15px;">First Name</option>
@@ -67,9 +67,10 @@
                         <td>{{$emp->dep_name}}</td>
                         <td>
                             <a href="{{ asset('/employee/show?id='.$emp->id)}}" class="view"><i class="material-icons" data-toggle="tooltip" title="View">&#xE896;</i></a>
+                            <a href="{{asset('/downloadPDF?id='.$emp->id)}}"><i>&#x20BD;</i></a>
                             <a href="{{ asset('employee/update?id='.$emp->id)}}" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                            <a href="{{ asset('/employee/delete?id='.$emp->id)}}"  onclick="return confirm('Are you sure you want to delete these Records?')" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                           <a href="{{asset('/downloadPDF?id='.$emp->id)}}"><i>&#x20BD;</i></a>
+                           
                         </td>
                     </tr>
                  @endforeach

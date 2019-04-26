@@ -56,6 +56,7 @@ class EmployeeController extends Controller
     {
         //
         $this->validate($request, [
+            'emp_id'          =>  'required|max:11',
             'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'address'        =>  'required|min:10|max:150',
             'number'          =>  'required|max:11',
@@ -153,6 +154,7 @@ class EmployeeController extends Controller
         $id=$request->get('id');
         $employees=Employee::find($id);
         $this->validate($request, [
+            'emp_id'          =>  'required|max:11',
             'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'address'        =>  'required|min:10|max:150',
             'number'          =>  'required|max:11',

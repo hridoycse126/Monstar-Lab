@@ -42,17 +42,17 @@
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid email is: az@mail.com">
-            <input class="input100" type="email" name="email">
+            <input class="input100" maxlength="25" type="email" name="email">
             <span class="focus-input100" data-placeholder="Email Address"></span>
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "0-9">
-            <input class="input100" type="number" name="number">
+            <input class="input100" maxlength="11" type="number" name="number" required>
             <span class="focus-input100" data-placeholder="Mobile Number"></span>
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid address is: a-z/0-9">
-            <input class="input100" type="text" name="address">
+            <input class="input100" maxlength="150" type="text" name="address">
             <span class="focus-input100" data-placeholder="Address"></span>
           </div>
 
@@ -72,7 +72,7 @@
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "0-9">
-            <input class="input100" type="number" name="nid">
+            <input class="input100" maxlength="16" type="number" name="nid">
             <span class="focus-input100" data-placeholder="NID Number"></span>
           </div>
 
@@ -133,12 +133,12 @@
 
           <div class="wrap-input100 validate-input" data-validate = "Valid date is: 11/12/2018">
             <p>Date Joined</p>
-            <input class="input100" type="date" name="join_date" value=""> 
+            <input class="input100" maxlength="10" type="date" name="join_date"> 
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid date is: 11/12/2018">
             <p>Date Of Birth</p>
-            <input class="input100" type="date" name="birth_date" value="">
+            <input class="input100" maxlength="10" type="date" name="birth_date">
           </div>
           <div class="file-field input-field col s12 m12 l12 xl8 offset-xl2">
             <p style="font-size: 25px"><b>Picture<b></p>

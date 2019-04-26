@@ -15,11 +15,11 @@
                     <div class="modal-body">                    
                         <div class="form-group">
                             <label><h5>City Name</h5></label>
-                            <input type="text" class="form-control" name="city_name" value="{{  $cities->city_name }}" required>
+                            <input type="text" maxlength="10" class="form-control" name="city_name" value="{{  $cities->city_name }}" required>
                         </div>
                         <div class="form-group">
                             <label><h5>Zip Code</h5></label>
-                            <input type="text" class="form-control" name="zip_code" value="{{ $cities->zip_code }}" required>
+                            <input type="text" maxlength="5" class="form-control" name="zip_code" value="{{ $cities->zip_code }}" required>
                         </div>                  
                     </div>
                     <div class="modal-footer">

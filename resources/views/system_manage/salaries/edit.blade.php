@@ -15,7 +15,7 @@
                     <div class="modal-body">                    
                         <div class="form-group">
                             <label><h5>Salary Name</h5></label>
-                            <input type="text" class="form-control" name="salary_amount" value="{{ $salaries->salary_amount }}" required>
+                            <input type="text" maxlength="6" class="form-control" name="salary_amount" value="{{ $salaries->salary_amount }}" required>
                         </div>                 
                     </div>
                     <div class="modal-footer">
