@@ -154,7 +154,6 @@ class EmployeeController extends Controller
         $id=$request->get('id');
         $employees=Employee::find($id);
         $this->validate($request, [
-            'emp_id'          =>  'required|max:11',
             'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'address'        =>  'required|min:10|max:150',
             'number'          =>  'required|max:11',
@@ -167,7 +166,7 @@ class EmployeeController extends Controller
             $picture = date('Y-m-d') . '-' . str_random(10) . '.' . $extension;
             $imageName->move(public_path('pictures/'), $picture);
         }
-        $employees->emp_id = $request->input('emp_id');
+    
         $employees->first_name=$request->input('first_name');
         $employees->last_name=$request->input('last_name');
         $employees->father_name=$request->input('father_name');
@@ -197,14 +196,14 @@ class EmployeeController extends Controller
     }
     public function search(Request $request){
         $this->validate($request,[
-            'search'   => 'required|min:1|max:10',
+            'search'   => 'required|min:1|max:13',
             'options'  => 'required'
         ]);
         $str = $request->input('search');
         $option = $request->input('options');
         $employees = DB::table('employees')
         ->join('departments', 'departments.id', '=', 'employees.dep_id')
-        ->where($option, 'LIKE' , '%'.$str.'%')
+        ->where($option, 'LIKE' , '%' .$str. '%')
         ->get(['employees.*', 'departments.dep_name']);
         return view('employees.index')->with(['employees' => $employees , 'search' => true ]);
     }

@@ -68,7 +68,7 @@ Route::POST('/division/update/insert','DivisionController@update');
 Route::get('/division/delete','DivisionController@destroy');
 
 /*Employee Routes*/
-Route::get('/employee','EmployeeController@index');
+Route::get('/employee','EmployeeController@index')->name('employee');
 Route::get('/employee/show','EmployeeController@show');
 Route::get('/employee/list','EmployeeController@create');
 Route::POST('/employee/insert','EmployeeController@store');

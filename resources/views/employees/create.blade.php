@@ -22,22 +22,22 @@
           <h5 class="login100-form-title p-b-26" style="color: green">Add Employee</h5>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid id is: 0-9">
-            <input class="input100" type="text" name="emp_id" required>
+            <input class="input100" type="text" maxlength="11" name="emp_id" required>
             <span class="focus-input100" data-placeholder="Employee ID"></span>
           </div>
           
           <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
-            <input class="input100" type="text" name="first_name">
+            <input class="input100" type="text" maxlength="25" name="first_name">
             <span class="focus-input100" data-placeholder="First Name"></span>
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
-            <input class="input100" type="text" name="last_name">
+            <input class="input100" type="text" maxlength="15" name="last_name">
             <span class="focus-input100" data-placeholder="Last Name"></span>
           </div>
 
           <div class="wrap-input100 validate-input" data-validate = "Valid name is: a-z">
-            <input class="input100" type="text" name="father_name">
+            <input class="input100" type="text" maxlength="30" name="father_name">
             <span class="focus-input100" data-placeholder="Father's Name"></span>
           </div>
 
