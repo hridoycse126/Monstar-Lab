@@ -13,7 +13,9 @@
 
 # Requirements:
 php (>=7.1)
+
 mysql
+
 composer
 
 # Steps:
@@ -32,6 +34,7 @@ vi) Run these commands serially without quotation marks
     composer update
     php artisan key:generate
     php artisan migrate
+    php artisan db:seed
     php aritsan serve
 vii) Now open any browser and visit localhost:8000/121.0.0.1:8000
 ## Contributing
